@@ -1,32 +1,23 @@
 import "./product.css";
 import QuantityPicker from "../components/quantityPicker";
-import { useState } from 'react';
 
-const Product = () => {
-    const [price, setPrice] = useState(29.99);
+const Product = (props) => {
+  return (
+    <div className="product">
+      <img src={"/images/" + props.data.image} alt="" />
 
-    const increase = () => {
-        let value = price + 29.99
-        setPrice(value);
-    };
+      <h5>{props.data.title}</h5>
 
-    const decrease = () => {
-        if (price ===29.99) {
-            return;}
-        let value = price - 29.99;
-        setPrice(value);
-    };
-        return (
-            <div className="product">
-                <h1>Product</h1>
-                <img src="https://picsum.photos/200" alt=""/>
-            <div class="q-Picker">
-                <QuantityPicker/>
-                <form className="d-flex" role="search">
-                    <input className="form-control me-2"/>
-                </form>
-                </div>
-            </div>
-        );
-}
-    export default Product;
+      <div className="prices">
+        <label className="total">Total</label>
+        <label className="price">Price</label>
+      </div>
+      <div className="controls">
+        <QuantityPicker />
+
+        <button className="btn btn-sm btn-success">Add</button>
+      </div>
+    </div>
+  );
+};
+export default Product;
