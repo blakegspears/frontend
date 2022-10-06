@@ -6,13 +6,14 @@ import Footer from "./components/footer";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+import WishList from "./components/wishList";
 
 function App() {
   return (
     <div>
       <NavBar />
       <Catalog />
-
+      <WishList />
       <Footer />
     </div>
   );
