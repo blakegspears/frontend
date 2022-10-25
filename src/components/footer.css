@@ -1,20 +1,26 @@
 
 
 .footer {
-    border: 1px solid purple;
-    background-color: gray;
+    display:flex;
+    background-color: rgba(179, 171, 132, 0.619);
+    justify-content: center;
+    margin-top: 470px;
+    
+    
+
     
 
 }
-.footer .year{
-    color: blue;
-    flex: 1;
-
-
-}
-
+.footer .year,
 .footer .name {
-    color: green;
-    display: flex;
-    align-items: flex-start;
+    font-size: larger;
+    color: white;
+    font-weight: 500;
+    padding: 10px;
+    
+    
+   
+
+
 }
+
