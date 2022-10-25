@@ -1,25 +1,28 @@
 import "./productInCart.css";
 
 const ProductInCart = (props) => {
-    return <div className="prod-cart">
+  const getTotal = () => {
+    return props.data.price * props.data.quantity;
+  };
 
+  return (
+    <div className="prod-cart">
+      <div className="info">
+        <h5>{props.data.title}</h5>
+        <p>{props.data.category}</p>
+      </div>
 
+      <img src={"/images/" + props.data.image} alt="" />
 
-        <div className="info">
-            <h5>{props.data.title}</h5>
-            <p>{props.data.category}</p>
-        </div>
+      <label>{props.data.price}</label>
 
-        <img src={"/images/" + props.data.image} alt="" />
+      <label>{props.data.quantity}</label>
 
-        <label>{props.data.price}</label>
+      <label>{getTotal()}</label>
 
-        <label>{props.data.quantity}</label>
-
-        <label>{getTotal()}</label>
-
-        <button className="btn btn-sm btn-danger">Remove</button>
+      <button className="btn btn-sm btn-danger">Remove</button>
     </div>
+  );
 };
 
 export default ProductInCart;
