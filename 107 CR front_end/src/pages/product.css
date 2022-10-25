@@ -1,0 +1,40 @@
+.catalog h1 {
+  color: black;
+  background-color: rgb(221, 221, 221);
+}
+
+.product {
+  display: inline-block;
+  border: 2px solid black;
+  margin: 3rem;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.product:hover {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.list-container {
+  margin: 5rem;
+  color: black;
+}
+img {
+  width: 200px;
+  height: 200px;
+}

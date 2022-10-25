@@ -1,0 +1,14 @@
+
+
+.home .banner img {
+    width: 100%;
+}
+
+.home .banner {
+    position:relative;
+}
+
+.home .banner .text {
+    position: absolute;
+    
+}
